@@ -9,7 +9,7 @@ header{
     height: 100px;
     background: #6b7a8f;
     padding: 0 50px;
-    color: #fff;
+    color: #dcc7aa;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -24,7 +24,7 @@ header{
 
 /*nav class*/
 .menu a{
-    color: #fff;
+    color: #dcc7aa;
     text-transform: uppercase;
     text-decoration: none;
     padding: 0 10px;
@@ -44,7 +44,7 @@ header{
 }
 
 .menu a:hover, .mostrar-menu:hover, .esconder-menu:hover{
-    color:#6cc091;
+    color:#f7c331;
 }
 
 #check{
@@ -55,20 +55,10 @@ header{
 #banner{
     padding: 0 50px;
     background-image: url(imagem/petnagrama.jpg);
-    height: 60vh;
+    height: 45vh;
     background-size: cover;
     background-position: center;
-}
-
-/*pseudo classe "::"*/
-#banner::before{
-	content: '';
-	/*background: rgba(77,77,92,0.6);*/ /*escala de cores*/
-	position: absolute;
-	width: 100%;
-	height: 45vh;
-	left: 0;
-}
+    }
 
 .conteudo-banner{
 	position: relative; /*coloca o texto a frente da figura*/
@@ -105,13 +95,13 @@ header{
 	text-decoration: none; /*none=tira o sublinhado*/
 	color: #6b7a8f;
 	padding: 10px 30px;
-	border: 1px solid #dcc7aa;
+	border: 1px solid #f7882f;
 	border-radius: 30px;
 	margin-top: 15px;
 	transition: all 0.4s;
 }
 .botao-saiba-mais:hover{
-	background: #dcc7aa;
+	background: #f7c331;
 	color: #6b7a8f;
 }
 
@@ -129,21 +119,20 @@ header{
 	padding: 30px 30px;
 }
 #pessoas div h4{
-	color: #4d4d5c;
+	color: #f7882f;
 	font-size: 20px;
 	margin: 15px 0px;
 }
 #pessoas div p{
-	color: #4d4d5c;
+	color: #6b7a8f;
 	font-size: 18px;
 }
 
 /*icones*/
 #icons{
 	padding: 0px 50px;
-	background: rgba(77,77,92,0.6);
-	/*color: rgba(209, 230, 221,0.5);*/
-}
+	background: #dcc7aa;
+	}
 
 .conteudos-icons{
 	padding: 50px 50px 0px 50px;
@@ -154,23 +143,23 @@ header{
 .conteudos-icons div{
 	flex:1;
 	margin: 20px 0px;
-	border-right: 2px solid rgba(255,255,255,0.2)
+	border-right: 2px solid #f7882f
 }
 #icons-mobile{
 	border:none;
 }
 .conteudos-icons div i{
-	color: #6cc091;
+	color: #6b7a8f;
 	
 }
 .conteudos-icons div h6{
-	color: #fff;
+	color:#6b7a8f;
 	font-size: 20px;
 	font-weight: 100;
 	margin: 10px 0px;
 }
 .conteudos-icons div p{
-	color: rgba(255,255,255,0.55);
+	color: #f7882f;
 	font-size: 15px;
 }
 .botao-icons{
@@ -180,9 +169,9 @@ header{
 
 /*formulario*/
 #contato{
-	background: #6cc091;
+	background: #6b7a8f;
 	padding: 50px 0px;
-	color: #fff;
+	color: #f7c331;
 }
 #contato h4{
 	text-align: center;
@@ -205,17 +194,17 @@ form label{
 	margin-bottom: 10px;
 }
 form input, form textarea{
-	background: #6cc091;
+	background: #fff;
 	border-radius: 10px;
-	border: 2px solid #8dcca9;
+	border: 2px solid #dcc7aa;
 	padding: 10px 5px;
 	outline: 0;
-	color: #fff;
+	color: #6b7a8f;
 	width: 100%;
 }
 form input:focus, form textarea:focus{
-	border-color: #4bae77;
-	box-shadow: 0 0 0 1px #4bae77;/*shadow faz sobra*/
+	border-color: #f7c331;
+	box-shadow: 0 0 0 2px #f7882f;/*shadow faz sobra*/
 }
 form input::placeholder, form textarea::placebholder{
 	color: #fff;
@@ -223,28 +212,22 @@ form input::placeholder, form textarea::placebholder{
 
 .botao-formulario .botao-saiba-mais{
 	display: block;
-	border: 1px solid #fff;
-	color: #fff;
+	border: 1px solid #f7c331;
+	color: #f7882f;
 	text-align: center;
-	transition: 0.4s
+	transition: 0.4s;
 }
 .botao-formulario .botao-saiba-mais:hover{
-	background: #4fa776ad;
+	background: #f7c331;
 }
 
-
-footer{
-	background: #4d4d5c;
-	color: #cccccc4a;
+footer {
+	background: #6b7a8f;
+	color: #fff;
 	text-align: center;
 	padding: 10px 0px;
 }
 
-/*.mensagem{
-	display: flex;
-	flex-direction: column;
-	padding: 10px;
-}*/
 
 
 /*Responsive 768 - tablet*/
@@ -257,7 +240,7 @@ footer{
 		position: fixed;
 		width: 100%;
 		height: 100%;
-		background: #4d4d5c;
+		background: #f7c331;
 		/*left: 0;*/ /* "X" do menu*/
 		right: -100%;
 		top: 0;
@@ -293,26 +276,6 @@ footer{
 	}
 	} /* Fim do seletor @media*/
 
-
-	/*Configuração do efeito do botão saiba mais*/
-	/*.efeito-pular-botao:hover{
-		animation: bounce 1s;
-	}
-	@keyframes bounce{
-		0%, 20%, 60%, 100%{
-			-webkit-transform: translateY(0);
-			transform: translateY(0);
-		}
-		40%{
-			-webkit-transform: translateY(-20px);
-			transform: translateY(-20px);
-		}
-		80%{
-			-webkit-transform: translateY(-10px);
-			transform: translateY(-10px);
-		}
-    }*/
-}
 
 
 
