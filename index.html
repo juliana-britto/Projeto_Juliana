@@ -25,10 +25,16 @@
         </label>
 
         <nav class="menu">
-            <a href="home.html">Home</a>
 
             <div class="dropdown">
-                <button class="dropbtn">Seviços</button>
+                <a class="dropbtn" href="#">Home</a>
+                <div class="dropdown-content">
+                    <b><a href="home.html">Quem somos</a></b>
+                </div>
+            </div>
+
+            <div class="dropdown">
+                <a class="dropbtn" href="servicos.html">Seviços</a>
                 <div class="dropdown-content">
                     <b><a href="servicos.html">Banho</a></b>
                     <b><a href="servicos.html">Tosa</a></b>
@@ -36,7 +42,7 @@
                 </div>
             </div>
 
-            <a href="#">Contato</a>
+            <a href="contato.html">Contato</a>
 
             <label for="check" class="esconder-menu">
                 &#215;
@@ -149,61 +155,21 @@
         <h4>
             Fale conosco
         </h4>
-        <form action="#">
-            <div class="dados-formulario">
-                <div class="nome">
-                    <label for="nome">
-                        Nome
-                    </label>
-                    <input type="text" name="nome" id="nome" placeholder="Nome">
-                </div>
-                <!--Fim da class nome-->
 
-                <div class="email">
-                    <label for="" email>
-                        E-mail
-                    </label>
-                    <input type="email" name="email" id="email" placeholder="E-mail">
-                </div>
-                <!--Fim da class Email-->
-            </div>
 
-            <!--dados-formulario-->
-            <div class="mensagem">
-                <label for="mensagem">
-                    Mensagem
-                </label>
-                <textarea name="mensagem" id="mensagem" cols="30" rows="10">
-				</textarea>
-            </div>
-            <!--Fim da class mensagem-->
+        <div class="botao-formulario">
+            <a href="contato.html" class="botao-saiba-mais">
+                Clik aqui
+            </a>
+        </div>
+        <!--Fim botao-formulario-->
 
-            <div class="botao-formulario">
-                <a href="#" class="botao-saiba-mais">
-                    Enviar mensagem
-                </a>
-            </div>
-            <!--Fim botao-formulario-->
-
-        </form>
-        <!--Fim do form action-->
     </section>
     <!--Fim da seção contato-->
 
     <footer>
         &copy; 2020 - Todos os direitos reservados - Juliana Britto
     </footer>
-
-
-
-
-
-
-
-
-
-
-
 
 </body>
 

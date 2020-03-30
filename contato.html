@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width-device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE-edge">
+    <link rel="stylesheet" type="text/css" href='style.css'>
+    <!-- Script dos icones do site https://fontawesome.com/ -->
+    <script src="https://kit.fontawesome.com/0268ce440b.js" crossorigin="anonymous"></script>
+
+    <title>Projeto Final Juliana</title>
+
+</head>
+
+<body>
+
+    <header>
+
+        <h2 class="logo"> Princesa Pet </h2>
+
+        <input type="checkbox" id="check">
+        <label for="check" class="mostrar-menu">
+            &#8801;
+        </label>
+
+        <nav class="menu">
+            <a href="index.html">Home</a>
+
+            <div class="dropdown">
+                <a class="dropbtn" href="servicos.html">Seviços</a>
+                <div class="dropdown-content">
+                    <b><a href="servicos.html">Banho</a></b>
+                    <b><a href="servicos.html">Tosa</a></b>
+                    <b><a href="servicos.html">Vacinação</a></b>
+                </div>
+            </div>
+
+            <a href="#">Contato</a>
+
+            <label for="check" class="esconder-menu">
+                &#215;
+            </label>
+
+        </nav>
+
+    </header>
+
+
+    <!--Inicio contatos-->
+    <section id="contato">
+        <h4>
+            Fale conosco
+        </h4>
+        <form action="#">
+            <div class="dados-formulario">
+                <div class="nome">
+                    <label for="nome">
+                        Nome
+                    </label>
+                    <input type="text" name="nome" id="nome" placeholder="Nome">
+                </div>
+                <!--Fim da class nome-->
+
+                <div class="email">
+                    <label for="" email>
+                        E-mail
+                    </label>
+                    <input type="email" name="email" id="email" placeholder="E-mail">
+                </div>
+                <!--Fim da class Email-->
+            </div>
+
+            <!--dados-formulario-->
+            <div class="mensagem">
+                <label for="mensagem">
+                    Mensagem
+                </label>
+                <textarea name="mensagem" id="mensagem" cols="30" rows="10">
+				</textarea>
+            </div>
+            <!--Fim da class mensagem-->
+
+            <div class="botao-formulario">
+                <a href="#" class="botao-saiba-mais">
+                    Enviar mensagem
+                </a>
+            </div>
+            <!--Fim botao-formulario-->
+
+        </form>
+        <!--Fim do form action-->
+    </section>
+    <!--Fim da seção contato-->
+
+    <footer>
+        &copy; 2020 - Todos os direitos reservados - Juliana Britto
+    </footer>
+
+</body>
+
+</html>
