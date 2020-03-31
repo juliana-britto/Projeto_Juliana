@@ -52,7 +52,7 @@
         <h4>
             Fale conosco
         </h4>
-        <form action="#">
+        <form action="cadastro.php" method="POST">
             <div class="dados-formulario">
                 <div class="nome">
                     <label for="nome">
@@ -63,12 +63,27 @@
                 <!--Fim da class nome-->
 
                 <div class="email">
-                    <label for="" email>
+                    <label for="email">
                         E-mail
                     </label>
                     <input type="email" name="email" id="email" placeholder="E-mail">
                 </div>
-                <!--Fim da class Email-->
+                <div class="telefone">
+                    <label for="telefone">
+                        Telefone
+                    </label>
+                    <input type="text" name="telefone" id="telefone" placeholder="Telefone">
+                </div>
+                <!--Fim da class telefone-->
+
+                <div class="endereco">
+                    <label for="endereco">
+                        Endereço
+                    </label>
+                    <input type="endereco" name="endereco" id="endereco" placeholder="Endereço">
+                </div>
+
+                <!--Fim da class endereço-->
             </div>
 
             <!--dados-formulario-->
@@ -82,9 +97,9 @@
             <!--Fim da class mensagem-->
 
             <div class="botao-formulario">
-                <a href="#" class="botao-saiba-mais">
+                <button type="submit" class="botao-saiba-mais">
                     Enviar mensagem
-                </a>
+                </button>
             </div>
             <!--Fim botao-formulario-->
 

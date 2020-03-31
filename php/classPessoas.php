@@ -1,24 +1,23 @@
 <?php
-namespace App;
-
 
 class Pessoa
 {
-    public $Codigo;
-    public $Nome;
-    public $Telefone;
-    public $Email;
-    public $Endereco;
+    public $codigo;
+    public $nome;
+    public $telefone;
+    public $email;
+	public $endereco;
+	public $mensagem;
     
         //método construtor: inicializa propriedades
-    function __construct($Codigo, $Nome, $Telefone, $Email, $Endereco)
+    function __construct($codigo, $nome, $telefone, $email, $endereco, $mensagem)
     {
-        $this->Codigo = $Codigo;
-        $this->Nome = $Nome;
-        $this->Telefone = $Telefone;
-        $this->Email = $Email;
-        $this->Endereco = $Endereco;
-        
+        $this->codigo = $codigo;
+        $this->nome = $nome;
+        $this->telefone = $telefone;
+        $this->email = $email;
+		$this->endereco = $endereco;        
+		$this->mensagem = $mensagem;        
     }//método destrutor:finaliza Objeto
 
     //Métodos SET's e GET's
@@ -60,22 +59,14 @@ class Pessoa
 	function getEndereco(){
 		return ($this->endereco);
 	}
-    	
-	function __construct ($codigo,$nome,$telefone,$email,$endereco){
-				
-		$this->setCodigo($codigo);
-		$this->setNome($nome);
-		$this->setAltura($telefone);
-		$this->setIdade($email);
-		$this->setNascimento($endereco);
-		
-		
-		echo '<h1>CADASTRO REALIZADO COM SUCESSO</h1>';
-		echo '<h2>Abaixo os dados cadastrados</h2>';
-		echo '<br>';		
-				
-		$this->imprimirDados();
+
+	function setMensagem($mensagem){
+		$this->mensagem = $mensagem;	
+	}	
+	function getMensagem(){
+		return($this->mensagem);
 	}
+
 	
 	function __destruct(){
 		echo '<BR><BR>O Objeto <strong>' . $this->getNome() .'</strong> foi finalizado..... ';	
@@ -90,11 +81,32 @@ class Pessoa
 		echo '<br>';
 		echo '<strong>Email: </strong>' . $this->getEmail();
 		echo "<br>";
-		echo '<strong>Endereço em : </strong>'.$this->getEndereço();
+		echo '<strong>Endereço: </strong>'.$this->getEndereco();
 		echo "<br>";		
+		echo '<strong>Mensagem: </strong>'.$this->getMensagem();
 	}	
 	
+	function salvarPessoa(){
+		$con = mysqli_connect("localhost", "root", "", "pet_juliana");
+
+		//checar a conexao
+		if (mysqli_connect_errno()){
+			echo "Falha na coneção com o servidor MySQL: " . mysql_connect_error();
+		}
+		else {
+			$query="INSERT INTO cadastro(nome, telefone, email, endereco, mensagem) VALUES ('$this->nome','$this->telefone','$this->email','$this->endereco','$this->mensagem')";
+
+			mysqli_query ($con, $query);
+		}
+	}
 	
 }
+/* echo '<h1>CADASTRO REALIZADO COM SUCESSO</h1>';
+echo '<h2>Abaixo os dados cadastrados</h2>';
+echo '<br>';		
+
+$objeto = new Pessoa('001','Juliana', '467586786', 'email@gmail.com', "Ilha de itamaracá", "quero vacinar meu doginho");
+$objeto-> imprimirDados(); */
+
 
 ?>
